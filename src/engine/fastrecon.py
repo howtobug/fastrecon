@@ -8,7 +8,7 @@ except:
         print("Syntax Error")
         exit()
 
-system("mkdir /results/{}".format(domain))
+system("mkdir results/{}".format(domain))
 
 
 def dig(domain):
