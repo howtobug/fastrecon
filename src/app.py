@@ -84,7 +84,6 @@ def report():
                 nmapList.append(line)
 
 
-        domain = domain.upper()
         targetList = Target.query.all()
         return render_template('report.html',
                                subdomainEnumeration=subdomainList,
@@ -139,7 +138,6 @@ def view():
             for line in file_in:
                 nmapList.append(line)
 
-        domain = domain.upper()
         targetList = Target.query.all()
         return render_template(
             'view.html',
