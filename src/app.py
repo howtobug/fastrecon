@@ -183,7 +183,7 @@ def waybackurls(domain):
 
 @app.route('/screenshots/<domain>')
 def screenshots(domain):
-    aquatone_folder = "engine/results/{}/aquatone".format(domain)
+    aquatone_folder = "engine/results/{}/aquatone/*".format(domain)
     system("cp -r {} templates/".format(aquatone_folder))
     return render_template('aquatone/aquatone_report.html')
 
