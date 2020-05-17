@@ -15,7 +15,7 @@ sudo apt-get install python3-pip -y
 
 echo "Flask and SQLAlchemy"
 sudo pip3 install flask
-flask_sqlalchemy
+sudo pip3 install flask_sqlalchemy
 sudo pip3 install sqlalchemy
 
 echo "Installing httprobe"
