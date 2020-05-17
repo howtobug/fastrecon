@@ -29,8 +29,7 @@ def getallurls():
         system("cat engine/results/{}/all-subdomains.txt | gau > engine/results/{}/spider.txt".format(domain, domain))
 
 def nmap():
-        #system("nmap -iL engine/results/{}/ips.txt > engine/results/{}/nmapOutput.txt".format(domain, domain))
-        system("touch engine/results/{}/nmapOutput.txt".format(domain))
+        system("nmap -iL engine/results/{}/ips.txt > engine/results/{}/nmapOutput.txt".format(domain, domain))
 
 def waybackurls():
         system("touch engine/results/{}/all-subdomains.txt".format(domain))
