@@ -1,0 +1,11 @@
+200 OK
+Referrer-Policy: strict-origin
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Server: Jetty(9.2.z-SNAPSHOT)
+Via: 1.1 vegur
+Retry-Count: 0
+Date: Sun, 17 May 2020 20:38:51 GMT
+Content-Type: text/html; charset=UTF-8
+X-Xss-Protection: 1; mode=block

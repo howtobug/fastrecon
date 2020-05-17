@@ -1,0 +1,15 @@
+200 OK
+Etag: "d00a9140ab99dddd61fd297d48f46b67"
+Last-Modified: Tue, 12 May 2020 13:24:31 GMT
+X-Amz-Cf-Pop: JNB50
+Date: Sun, 17 May 2020 19:22:28 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: text/html
+Retry-Count: 0
+Accept-Ranges: bytes
+Server: AmazonS3
+Expires: -1
+X-Cache: RefreshHit from cloudfront
+Via: 1.1 a2a27c1641ce2f4d55f18e482d6db9ec.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: KDmS6-oQh9T24ytlWXqhlq8wn9SVQw8WEmOKSXor3NTwoLAo3Rhgxw==
+Content-Length: 13261

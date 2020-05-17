@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Private Maven Repository Hosting - Deps</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.52" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.deps.co/index.xml">
+<link rel="canonical" href="https://www.deps.co/">
+  
+<link rel="dns-prefetch" href="fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+
+<link rel="dns-prefetch" href="www.google-analytics.com">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/css/all.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89420342-1', 'auto');
+    ga('set', 'displayFeaturesTask', null);
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-825540150"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-825540150');
+</script>
+<script src="https://js.stripe.com/v3/"></script>
+
+
+
+
+  <link href="/blog/index.xml" rel="alternate" type="application/rss+xml" title="Deps" />
+  <link href="/blog/index.xml" rel="feed" type="application/rss+xml" title="Deps" />
+  <style>.sidedevices .computerwrapper .mask {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: -1px 1px 4px rgba(107,124,147,.45);
+	background: white;
+}
+.sidedevices .computerwrapper .mask-img {
+	width: 100%;
+	display: block;
+}
+.sidedevices .computerwrapper .computer {
+	width: 800px;
+	height: 520px;
+	background: linear-gradient(to bottom, rgba(247,251,254,1) 0%,rgba(221,226,232,1) 100%);
+	border-radius: 18px;
+	position: relative;
+	box-shadow: inset 0 2px 7px 1px rgba(255,255,255,.5),inset 0 -5px 20px rgba(187,200,225,.35),0 2px 6px rgba(40,39,66,.14),0 10px 20px rgba(40,39,66,.06), 76px 75px 169px -35px rgba(0,0,0,0.4);
+	padding: 28px;
+}
+.sidedevices .computerwrapper .computer:after,
+.sidedevices .computerwrapper .computer:before {
+	content: "";
+	position: absolute;
+	border-radius: 3px 3px 0 0;
+	width: calc(100% + 200px);
+	height: 10px;
+	background: linear-gradient(to right, rgba(246,250,253,1) 0%,rgba(221,226,233,1) 6%,rgba(246,250,253,1) 15%,rgba(246,250,253,1) 42%,rgba(230, 230, 230, 1) 42%,rgba(246,250,253,1) 45%,rgba(246,250,253,1) 53%,rgba(230, 230, 230, 1) 56%,rgba(246,250,253,1) 56%, rgba(246,250,253,1) 85%,rgba(221,226,233,1) 94%,rgba(246,250,253,1) 100%);
+	left: -100px;
+	bottom: -5px;
+}
+.sidedevices .computerwrapper .computer:before {
+	height: 6px;
+	bottom: -11px;
+	border-radius: 0 0 40px 40px;
+	background: #dde2e9;
+	box-shadow: inset 0px -25px 10px -20px rgba(0,0,0,.5);
+}
+@media screen and (max-width: 900px) {
+.sidedevices .computerwrapper .sidedevices .computerwrapper .computer{
+		margin: auto;
+		width: 100%;
+		padding: 20px;
+		height: calc((100vw - 80px) * .75);
+	}
+}.centerdevices .iphoneipad2 .mask {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: -1px 1px 4px rgba(107,124,147,.45);
+	background: white;
+}
+.centerdevices .iphoneipad2 .mask-img {
+	width: 100%;
+	display: block;
+}
+.centerdevices .iphoneipad2 .iphone,
+.centerdevices .iphoneipad2 .ipad {
+	border-radius: 40px;
+	position: relative;
+	background: linear-gradient(to bottom, rgba(247,251,254,1) 0%,rgba(221,226,232,1) 100%);
+	box-shadow: inset 0 4px 7px 1px #fff,inset 0 -5px 20px rgba(187,200,225,.35),0 2px 6px rgba(40,39,66,.14),0 10px 20px rgba(40,39,66,.06), 0px 36px 79px -1px rgba(0,0,0,0.15);
+	overflow: hidden;
+}
+.centerdevices .iphoneipad2 .iphone {
+	border-radius: 30px;
+  width: 280px;
+  height: 560px;
+  z-index: 2;
+  padding: 60px 12px 70px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(-5deg);
+}
+.centerdevices .iphoneipad2 .iphone .mask {
+	border-radius: 4px;
+}
+.centerdevices .iphoneipad2 .ipad {
+	width: 830px;
+	height: 560px;
+	padding: 15px 85px;
+	margin-left: auto;
+	transform: rotate(5deg);
+}
+
+.centerdevices .iphoneipad2 .ipad:after,
+.centerdevices .iphoneipad2 .iphone:after,
+.centerdevices .iphoneipad2 .ipad:before {
+	content: "";
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: rgba(0,0,0,.05);
+	position: absolute;
+	top: calc(50% - 22px);
+	right: 23px;
+}
+.centerdevices .iphoneipad2 .ipad:after {
+	left: 34px;
+	width: 16px;
+	height: 16px;
+	top: calc(50% - 8px);
+}
+.centerdevices .iphoneipad2 .iphone:after {
+  top: initial;
+  bottom: 14px;
+  left: calc(50% - 22px);
+}
+.centerdevices .iphoneipad2 .iphone:before {
+  content: "";
+  width: 58px;
+  height: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 28px;
+  left: calc(50% - 29px);
+}
+@media screen and (max-width: 900px) {
+	.centerdevices .iphoneipad2 {
+		position: relative;
+		white-space: nowrap;
+		vertical-align: top;
+		overflow: scroll;
+		width: calc(100% + 40px);
+		margin: 0 0 0 -20px;
+		z-index: 99;
+		-webkit-overflow-scrolling: touch;
+	}
+	.centerdevices .iphoneipad2 .iphone,
+	.centerdevices .iphoneipad2 .ipad {
+		transform: none;
+		border: none;
+		position: relative;
+		box-shadow: inset 0 4px 7px 1px #fff,inset 0 -5px 20px rgba(187,200,225,.35),0 2px 6px rgba(40,39,66,.14),0 10px 20px rgba(40,39,66,.06);
+		background: linear-gradient(to bottom, rgba(247,251,254,1) 0%,rgba(221,226,232,1) 100%);
+		margin: 0 20px;
+		display: inline-block;
+	}
+	.centerdevices .iphoneipad2 .iphone {
+		height: 440px;
+		width: 220px;
+		padding: 50px 8px 60px;
+		margin: 0 0 0 20px;
+		border-radius: 30px;
+	}
+	.centerdevices .iphoneipad2 .iphone .mask {
+		border-radius: 4px;
+	}
+	.centerdevices .iphoneipad2 .iphone:before {
+		top: 24px;
+		width: 50px;
+		height: 7px;
+		left: calc(50% - 25px);
+	}
+	.centerdevices .iphoneipad2 .iphone:after {
+		width: 38px;
+		height: 38px;
+		left: calc(50% - 19px);
+		bottom: 12px;
+	}
+	.centerdevices .iphoneipad2 .ipad {
+		width: 740px;
+		height: 440px;
+	}
+	.centerdevices .iphoneipad2 .ipad:before {
+		left: 23px;
+		right: inherit;
+	}
+	.centerdevices .iphoneipad2 .ipad:after {
+		right: 36px;
+    left: inherit;
+	}
+}
+</style>
+
+</head>
+
+<body data-smooth-scroll-offset="77">
+  <div class="nav-container">
+  <div class="via-1533333230721" via="via-1533333230721" vio="Standard Nav">
+    <div class="bar bar--sm visible-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-md-2">
+            <a href="/">
+              <span class="header-logo header-logo--dark logo logo-dark">Deps</span>
+              <span class="header-logo logo logo-light">Deps</span>
+              
+          </div>
+          <div class="col-9 col-md-10 text-right">
+            <a href="#native-maven-repository" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm">
+              <i class="icon icon--sm stack-interface stack-menu"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav id="menu1" class="bar bar-1 hidden-xs bar--absolute bar--transparent">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 hidden-xs">
+            <div class="bar__module">
+              <a href="/" class="header-logo-link">
+                <span class="header-logo header-logo--dark logo logo-dark">Deps</span>
+                <span class="header-logo logo logo-light">Deps</span>
+                
+                
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 text-right text-left-xs text-left-sm">
+            <div class="bar__module">
+              <ul class="menu-horizontal text-left">
+                <li>
+                  <a href="/blog/">
+                    Blog</a>
+                </li>
+                <li>
+                  <a href="/pricing/">
+                    Pricing</a>
+                </li>
+              </ul>
+            </div>
+            <div class="bar__module">
+              <a id="login-button" class="btn btn--sm type--uppercase" href="https://app.deps.co/login">
+                <span class="btn__text">
+                  Login</span>
+              </a>
+              <a id="sign-up-button" class="btn btn--sm type--uppercase btn--primary " href="/sign-up/">
+                <span class="btn__text">
+                  Sign Up</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  <div class="main-container">
+    <section class="cover cover-features space--md bg--dark-blue imagebg slash-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-lg-7 pvt-maven-text">
+            <h1> Private Maven Repositories, without the server.</h1>
+            <p class="lead"> Deps is a private, hosted Maven repository service. It runs on our highly available
+              infrastructure, so you don't
+              need to run it on yours.
+              <br> </p>
+            <a class="btn btn--primary type--uppercase" href="/sign-up/" id="get-started-button">
+              <span class="btn__text">
+                Get Started</span>
+            </a>
+          </div>
+          <div class="col-md-3 col-lg-5 sidedevices d-none d-md-block">
+            <div class="computerwrapper">
+              <div class="computer">
+                <div class="mask">
+                  <img class="mask-img" src="/img/homepage/newwebpage.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="compatible-with">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Compatible with all of your JVM based tooling</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
+              <ul class="slides">
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/java@1x.png" srcset="img/homepage/java@1x.png, img/homepage/java@2x.png 2x">
+                  <p>Java</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/scala.svg">
+                  <p>Scala</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/maven@1x.png" srcset="img/homepage/maven@1x.png, img/homepage/maven@2x.png 2x">
+                  <p>Maven</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/sbt@1x.png" srcset="img/homepage/sbt@1x.png, img/homepage/sbt@2x.png 2x">
+                  <p>SBT</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/android@1x.png" srcset="img/homepage/android@1x.png, img/homepage/android@2x.png 2x">
+                  <p>Android</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/kotlin@1x.png" srcset="img/homepage/kotlin@1x.png, img/homepage/kotlin@2x.png 2x">
+                  <p>Kotlin</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/gradle.svg">
+                  <p>Gradle</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/boot@1x.png" srcset="img/homepage/boot@1x.png, img/homepage/boot@2x.png 2x">
+                  <p>Boot</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/leiningen@1x.jpg" srcset="img/homepage/leiningen@1x.jpg, img/homepage/leiningen@2x.jpg 2x">
+                  <p>Leiningen</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/clojure.svg">
+                  <p>Clojure</p>
+                </li>
+                <li class="col-md-2 col-4">
+                  <img alt="Image" class="image--sm" src="img/homepage/groovy.svg">
+                  <p>Groovy</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="feature feature-3 boxed boxed--lg boxed--border">
+              <div class="icon icon--lg">
+                <svg class="icon-Cloud">
+                  <use xlink:href="#icon-Cloud"></use>
+                </svg>
+              </div>
+              <h4>Highly Available Infrastructure</h4>
+              <p> No more SSHing in to the server because a disk filled up.
+                <strong>Deps provides a highly available service</strong>, so your team can focus on their work without
+                disruptions.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature feature-3 boxed boxed--lg boxed--border">
+              <div class="icon icon--lg">
+                <svg class="icon-Lock-3">
+                  <use xlink:href="#icon-Lock-3"></use>
+                </svg>
+              </div>
+              <h4>Private and Secure</h4>
+              <p>Your code is one of the most important pieces of intellectual property your company owns.
+                <strong>Deps takes security of your JARs extremely seriously.</strong> Deps provides permissions and
+                audit logs to
+                control user and infrastructure access.
+              </p>
+              <a href="/security/">
+                Learn More
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature feature-3 boxed boxed--lg boxed--border">
+              <div class="icon icon--lg">
+                <svg class="icon-Plug-In">
+                  <use xlink:href="#icon-Plug-In"></use>
+                </svg>
+              </div>
+              <h4>No Plugins Required</h4>
+              <p> Deps provides a private native Maven repository
+                <strong>that all your tooling understands.</strong> No plugins to install, and it works out of the box
+                with Jenkins,
+                Travis, Circle CI, IntelliJ, Eclipse, and everything else you'd expect.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe-form-2 space--xs bg--secondary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4">
+            <p class="lead">Subscribe to our monthly newsletter</p>
+          </div>
+          <div class="col-lg-7">
+
+            
+
+              <form
+                action="https://danielcompton.us7.list-manage.com/subscribe/post?u=fef380870c4a5633a21f55d8e&amp;id=4a2be7d1df"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="mc_embed_signup_scroll">
+                      <div class="mc-field-group">
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                      </div>
+
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>
+                      
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                          name="b_fef380870c4a5633a21f55d8e_4a2be7d1df" tabindex="-1" value=""></div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                        class="btn btn--primary type--uppercase"></div>
+                  </div>
+                </div>
+
+              </form>
+
+
+            
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <footer class="space--sm footer-2 bg--secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 col-xs-6">
+        <h6 class="type--uppercase">Product</h6>
+        <ul class="list--hover">
+          <li>
+            <a href="/pricing/" target="_self">Pricing</a>
+          </li>
+          <li>
+            <a href="/guides/" target="_self">Guides</a>
+          </li>
+          <li>
+            <a href="https://docs.deps.co" target="_self">Docs</a>
+          </li>
+          <li>
+            <a href="/security/" target="_self">Security</a>
+          </li>
+          <li>
+            <a href="https://status.deps.co" target="_self">Status</a>
+          </li>
+          <li>
+            <a href="https://versions.deps.co" target="_self">Deps Versions</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 col-xs-6">
+        <h6 class="type--uppercase">Company</h6>
+        <ul class="list--hover">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="mailto:hi@deps.co">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 col-xs-6">
+        <h6 class="type--uppercase">For</h6>
+        <ul class="list--hover">
+          <li>
+            <a href="/for/maven/">Maven</a>
+          </li>
+          <li>
+            <a href="/for/leiningen/">Leiningen</a>
+          </li>
+          <li>
+            <a href="/for/boot/">Boot</a>
+          </li>
+          <li>
+            <a href="/for/clojure/">Clojure</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-md-3 col-xs-6">
+        <h6 class="type--uppercase">Compare</h6>
+        <ul class="list--hover">
+          <li>
+            <a href="/from/s3-wagon/">S3 Wagon</a>
+          </li>
+          <li>
+            <a href="/from/archiva/">Archiva</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <span class="type--fine-print">©2016-2020 Deps</span>
+        <a class="type--fine-print" href="/privacy/" target="_self">Privacy Policy</a>
+        <a class="type--fine-print" href="/terms-and-conditions/" target="_self">Terms &amp; Conditions</a>
+      </div>
+      <div class="col-sm-6 text-right text-left-xs">
+        <div class="icon--xs-plus">
+          <a href="https://twitter.com/deps_app" target="_self">
+            <svg class="icon-Twitter"><use xlink:href="#icon-Twitter"></use></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+    <symbol id="icon-Cloud" viewBox="0 0 32 32">
+    <title>Cloud</title>
+    <path d="M26.001 27.318h-18.667c-3.971 0-7.201-3.286-7.201-7.325 0-4.020 3.2-7.294 7.146-7.324 1.407-4.726 5.753-7.988 10.722-7.988 6.175 0 11.199 5.031 11.199 11.216 0 0.149-0.007 0.309-0.017 0.466 1.664 1.083 2.684 2.954 2.684 4.962 0 3.248-2.686 5.993-5.866 5.993zM7.414 13.748c-3.474 0-6.213 2.801-6.213 6.244 0 3.393 2.81 6.258 6.134 6.258h18.667c2.602 0 4.799-2.256 4.799-4.927 0-1.741-0.932-3.356-2.434-4.212-0.177-0.101-0.282-0.294-0.267-0.499 0.019-0.27 0.035-0.505 0.035-0.716 0-5.596-4.546-10.149-10.132-10.149-4.635 0-8.668 3.135-9.81 7.623-0.063 0.245-0.282 0.416-0.541 0.401-0.073-0.003-0.143-0.013-0.213-0.025-0.010 0.001-0.017 0.001-0.025 0.001z"></path>
+    </symbol>
+    <symbol id="icon-Lock-3" viewBox="0 0 32 32">
+    <title>Lock-3</title>
+    <path d="M16 31.423c-6.469 0-11.733-5.265-11.733-11.733 0-6.469 5.264-11.733 11.733-11.733 6.468 0 11.733 5.264 11.733 11.733 0 6.468-5.265 11.733-11.733 11.733zM16 9.023c-5.882 0-10.667 4.785-10.667 10.667s4.785 10.667 10.667 10.667 10.667-4.785 10.667-10.667c0-5.882-4.785-10.667-10.667-10.667z"></path>
+    <path d="M26.133 14.89c-0.293 0-0.533-0.239-0.533-0.533v-3.2c0-5.245-4.307-9.513-9.6-9.513s-9.6 4.346-9.6 9.689v3.024c0 0.294-0.239 0.533-0.533 0.533s-0.533-0.239-0.533-0.533v-3.024c0-5.932 4.785-10.755 10.667-10.755s10.667 4.746 10.667 10.579v3.2c0 0.294-0.24 0.533-0.533 0.533z"></path>
+    <path d="M16.533 26.090h-1.067c-0.882 0-1.6-0.718-1.6-1.6v-2.427c-0.682-0.609-1.067-1.46-1.067-2.373 0-1.764 1.436-3.2 3.2-3.2s3.2 1.436 3.2 3.2c0 0.912-0.385 1.762-1.067 2.373v2.427c0 0.882-0.718 1.6-1.6 1.6zM16 17.556c-1.177 0-2.133 0.956-2.133 2.133 0 0.667 0.311 1.284 0.855 1.696 0.133 0.102 0.211 0.258 0.211 0.425v2.679c0 0.293 0.239 0.533 0.533 0.533h1.067c0.293 0 0.533-0.24 0.533-0.533v-2.679c0-0.166 0.078-0.325 0.211-0.425 0.544-0.413 0.855-1.029 0.855-1.696 0-1.178-0.956-2.133-2.133-2.133z"></path>
+    </symbol>
+    <symbol id="icon-Plug-In" viewBox="0 0 32 32">
+    <title>Plug-In</title>
+    <path d="M13.867 7.412c-0.294 0-0.533-0.239-0.533-0.533v-4.505c0-0.365-0.095-0.8-0.546-0.8-0.346 0-0.521 0.269-0.521 0.8v4.505c0 0.294-0.239 0.533-0.533 0.533s-0.533-0.239-0.533-0.533v-4.505c0-1.134 0.623-1.867 1.587-1.867s1.613 0.75 1.613 1.867v4.505c0 0.294-0.239 0.533-0.533 0.533z"></path>
+    <path d="M20.267 7.412c-0.293 0-0.533-0.239-0.533-0.533v-4.505c0-0.531-0.179-0.8-0.533-0.8s-0.533 0.269-0.533 0.8v4.505c0 0.294-0.24 0.533-0.533 0.533s-0.533-0.239-0.533-0.533v-4.505c0-1.134 0.628-1.867 1.6-1.867s1.6 0.733 1.6 1.867v4.505c0 0.294-0.24 0.533-0.533 0.533z"></path>
+    <path d="M23.467 11.146h-14.933c-0.294 0-0.533-0.239-0.533-0.533v-3.2c0-0.294 0.239-0.533 0.533-0.533h14.933c0.293 0 0.533 0.239 0.533 0.533v3.2c0 0.294-0.24 0.533-0.533 0.533zM9.067 10.079h13.867v-2.133h-13.867v2.133z"></path>
+    <path d="M17.427 21.812h-2.612c-3.17 0-5.749-2.764-5.749-6.16v-5.040c0-0.294 0.239-0.533 0.533-0.533h12.8c0.294 0 0.533 0.239 0.533 0.533v5.040c0.001 3.454-2.418 6.16-5.505 6.16zM10.133 11.146v4.507c0 2.759 2.144 5.093 4.683 5.093h2.612c2.778 0 4.439-2.59 4.439-5.093v-4.507h-11.734z"></path>
+    <path d="M10.066 31.491c-0.294 0-0.533-0.24-0.533-0.533 0-3.682 1.909-4.972 3.595-6.111 1.375-0.929 2.462-1.663 2.462-3.569 0-0.293 0.239-0.533 0.533-0.533s0.533 0.24 0.533 0.533c0 2.473-1.49 3.479-2.931 4.452-1.607 1.086-3.125 2.111-3.125 5.225 0 0.298-0.239 0.537-0.533 0.537z"></path>
+    </symbol>
+    <symbol id="icon-Twitter" viewBox="0 0 32 32">
+    <title>Twitter</title>
+    <path d="M10.879 28.449c-3.244 0-6.543-0.93-9.808-2.765-0.222-0.124-0.324-0.386-0.245-0.629s0.31-0.397 0.569-0.365c2.551 0.292 5.394-0.358 7.404-1.642-2.37-0.453-4.292-1.933-5.284-4.125-0.086-0.191-0.053-0.416 0.085-0.572s0.355-0.219 0.556-0.158c0.51 0.156 1.026 0.229 1.5 0.219-1.798-0.91-4.022-2.946-4.022-6.084 0-0.206 0.118-0.394 0.305-0.482s0.406-0.062 0.565 0.068c0.361 0.293 0.762 0.511 1.178 0.641-0.608-0.708-1.157-1.659-1.445-2.766-0.435-1.676-0.183-3.373 0.727-4.907 0.090-0.151 0.246-0.247 0.422-0.26 0.167-0.012 0.345 0.062 0.454 0.199 1.999 2.494 5.562 5.514 11.307 6.018-0.145-1.717 0.331-4.701 2.803-6.145 2.959-1.73 5.855-1.494 8.303 0.678 1.13-0.234 2.937-1.021 3.321-1.291 0.183-0.128 0.428-0.129 0.611 0 0.183 0.128 0.268 0.357 0.21 0.574-0.193 0.723-0.668 1.54-1.241 2.222 0.548-0.146 1.042-0.309 1.268-0.427 0.213-0.111 0.475-0.064 0.639 0.114 0.161 0.177 0.186 0.442 0.058 0.644-0.795 1.255-2.090 2.422-2.925 3.028 0.363 4.145-1.311 8.721-4.513 12.311-3.397 3.804-7.939 5.899-12.795 5.899h-0.006zM3.663 25.79c2.418 1.058 4.837 1.594 7.216 1.594 0.001 0 0.001 0 0.002 0 4.547 0 8.809-1.969 12-5.542 3.088-3.457 4.665-7.868 4.219-11.798-0.022-0.199 0.067-0.395 0.237-0.506 0.432-0.286 1.14-0.858 1.802-1.551-0.679 0.169-1.391 0.295-1.871 0.298-0.001 0-0.001 0-0.001 0-0.256 0-0.475-0.181-0.523-0.432-0.050-0.251 0.087-0.502 0.326-0.597 0.474-0.188 1.149-0.839 1.655-1.578-0.848 0.352-1.86 0.695-2.566 0.797-0.158 0.021-0.322-0.029-0.439-0.14-2.15-2.020-4.603-2.252-7.235-0.717-2.393 1.398-2.446 4.65-2.195 5.676 0.041 0.164 0 0.337-0.108 0.467s-0.272 0.204-0.439 0.192c-6.038-0.319-9.917-3.22-12.213-5.837-0.581 1.354-0.478 2.574-0.262 3.407 0.402 1.548 1.418 2.737 2.192 3.187 0.192 0.111 0.294 0.33 0.258 0.548s-0.204 0.393-0.421 0.435c-0.819 0.164-1.701 0.035-2.497-0.339 0.594 3.023 3.712 4.442 4.571 4.535 0.212 0.022 0.389 0.171 0.451 0.375 0.063 0.204-0.002 0.425-0.165 0.562-0.604 0.511-1.548 0.734-2.627 0.627 1.13 1.665 2.964 2.624 5.179 2.673 0.219 0.005 0.413 0.143 0.489 0.348 0.076 0.204 0.019 0.436-0.144 0.582-1.692 1.518-4.262 2.524-6.887 2.733z"></path>
+    </symbol>
+    </defs>
+    </svg>
+
+</footer>
+
+  <script src="/js/fresh-url-v1.js" async></script>
+
+
+
+
+
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/flickity.min.js"></script>
+
+<script src="/js/deps-scripts.js"></script>
+
+</body>
+
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-Cloud" viewBox="0 0 32 32">
+      <title>Cloud</title>
+      <path d="M26.001 27.318h-18.667c-3.971 0-7.201-3.286-7.201-7.325 0-4.020 3.2-7.294 7.146-7.324 1.407-4.726 5.753-7.988 10.722-7.988 6.175 0 11.199 5.031 11.199 11.216 0 0.149-0.007 0.309-0.017 0.466 1.664 1.083 2.684 2.954 2.684 4.962 0 3.248-2.686 5.993-5.866 5.993zM7.414 13.748c-3.474 0-6.213 2.801-6.213 6.244 0 3.393 2.81 6.258 6.134 6.258h18.667c2.602 0 4.799-2.256 4.799-4.927 0-1.741-0.932-3.356-2.434-4.212-0.177-0.101-0.282-0.294-0.267-0.499 0.019-0.27 0.035-0.505 0.035-0.716 0-5.596-4.546-10.149-10.132-10.149-4.635 0-8.668 3.135-9.81 7.623-0.063 0.245-0.282 0.416-0.541 0.401-0.073-0.003-0.143-0.013-0.213-0.025-0.010 0.001-0.017 0.001-0.025 0.001z"></path>
+    </symbol>
+    <symbol id="icon-Lock-3" viewBox="0 0 32 32">
+      <title>Lock-3</title>
+      <path d="M16 31.423c-6.469 0-11.733-5.265-11.733-11.733 0-6.469 5.264-11.733 11.733-11.733 6.468 0 11.733 5.264 11.733 11.733 0 6.468-5.265 11.733-11.733 11.733zM16 9.023c-5.882 0-10.667 4.785-10.667 10.667s4.785 10.667 10.667 10.667 10.667-4.785 10.667-10.667c0-5.882-4.785-10.667-10.667-10.667z"></path>
+      <path d="M26.133 14.89c-0.293 0-0.533-0.239-0.533-0.533v-3.2c0-5.245-4.307-9.513-9.6-9.513s-9.6 4.346-9.6 9.689v3.024c0 0.294-0.239 0.533-0.533 0.533s-0.533-0.239-0.533-0.533v-3.024c0-5.932 4.785-10.755 10.667-10.755s10.667 4.746 10.667 10.579v3.2c0 0.294-0.24 0.533-0.533 0.533z"></path>
+      <path d="M16.533 26.090h-1.067c-0.882 0-1.6-0.718-1.6-1.6v-2.427c-0.682-0.609-1.067-1.46-1.067-2.373 0-1.764 1.436-3.2 3.2-3.2s3.2 1.436 3.2 3.2c0 0.912-0.385 1.762-1.067 2.373v2.427c0 0.882-0.718 1.6-1.6 1.6zM16 17.556c-1.177 0-2.133 0.956-2.133 2.133 0 0.667 0.311 1.284 0.855 1.696 0.133 0.102 0.211 0.258 0.211 0.425v2.679c0 0.293 0.239 0.533 0.533 0.533h1.067c0.293 0 0.533-0.24 0.533-0.533v-2.679c0-0.166 0.078-0.325 0.211-0.425 0.544-0.413 0.855-1.029 0.855-1.696 0-1.178-0.956-2.133-2.133-2.133z"></path>
+    </symbol>
+    <symbol id="icon-Plug-In" viewBox="0 0 32 32">
+      <title>Plug-In</title>
+      <path d="M13.867 7.412c-0.294 0-0.533-0.239-0.533-0.533v-4.505c0-0.365-0.095-0.8-0.546-0.8-0.346 0-0.521 0.269-0.521 0.8v4.505c0 0.294-0.239 0.533-0.533 0.533s-0.533-0.239-0.533-0.533v-4.505c0-1.134 0.623-1.867 1.587-1.867s1.613 0.75 1.613 1.867v4.505c0 0.294-0.239 0.533-0.533 0.533z"></path>
+      <path d="M20.267 7.412c-0.293 0-0.533-0.239-0.533-0.533v-4.505c0-0.531-0.179-0.8-0.533-0.8s-0.533 0.269-0.533 0.8v4.505c0 0.294-0.24 0.533-0.533 0.533s-0.533-0.239-0.533-0.533v-4.505c0-1.134 0.628-1.867 1.6-1.867s1.6 0.733 1.6 1.867v4.505c0 0.294-0.24 0.533-0.533 0.533z"></path>
+      <path d="M23.467 11.146h-14.933c-0.294 0-0.533-0.239-0.533-0.533v-3.2c0-0.294 0.239-0.533 0.533-0.533h14.933c0.293 0 0.533 0.239 0.533 0.533v3.2c0 0.294-0.24 0.533-0.533 0.533zM9.067 10.079h13.867v-2.133h-13.867v2.133z"></path>
+      <path d="M17.427 21.812h-2.612c-3.17 0-5.749-2.764-5.749-6.16v-5.040c0-0.294 0.239-0.533 0.533-0.533h12.8c0.294 0 0.533 0.239 0.533 0.533v5.040c0.001 3.454-2.418 6.16-5.505 6.16zM10.133 11.146v4.507c0 2.759 2.144 5.093 4.683 5.093h2.612c2.778 0 4.439-2.59 4.439-5.093v-4.507h-11.734z"></path>
+      <path d="M10.066 31.491c-0.294 0-0.533-0.24-0.533-0.533 0-3.682 1.909-4.972 3.595-6.111 1.375-0.929 2.462-1.663 2.462-3.569 0-0.293 0.239-0.533 0.533-0.533s0.533 0.24 0.533 0.533c0 2.473-1.49 3.479-2.931 4.452-1.607 1.086-3.125 2.111-3.125 5.225 0 0.298-0.239 0.537-0.533 0.537z"></path>
+    </symbol>
+
+  </defs>
+</svg>
+
+</html>

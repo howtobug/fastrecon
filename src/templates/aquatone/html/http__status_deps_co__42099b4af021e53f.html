@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Charset is very important for locale support. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Accreditation back to us. -->
+        <meta name="generator" content="Sorry™ (https://www.sorryapp.com)" />
+
+        <!-- Favicon. -->
+        <!-- App Details. -->
+        <meta name="application-name" content="Deps Status"/>
+        <meta name="apple-mobile-web-app-title" content="Deps Status" />
+
+        <!-- Page title differs based on template. -->
+        
+            <!-- Status page. -->
+            <!-- Dynamicly set the title using the helper method. -->
+            <title>Deps Status</title>
+
+            <!-- Display a meta description. -->
+            <meta name="description" content="Keep up to date with any interruptions to our service which may be affecting you." />
+        
+
+        <!-- Control the indexability of the page using the meta tags. -->
+        <!-- This is also controlled from /robots.txt but meta gives us slight more control. -->
+        
+            <!-- Allow indexing and following of links. -->
+            <meta name="robots" content="index, follow" />
+        
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://assets1.sorryapp.com/themes/000/006/315/assets/html5shiv-3-7-3.min.js?1587725659"></script>
+            <script src="https://assets2.sorryapp.com/themes/000/006/315/assets/respond-1-4-2.min.js?1587725659"></script>
+        <![endif]-->
+
+        <!-- Display favicon if one is assigned. -->
+        
+
+        <!-- Include CSS Assets. -->
+        <link rel="stylesheet" href="https://assets2.sorryapp.com/theme/asset/flavours/files/000/564/398/original/status-page.css?1589289866" />
+
+        <!-- Injected Head Content. -->
+        <!-- Google Analytics. -->
+<script>
+    // Include the GA tracking code.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // Configure internal analytics tracking.
+    ga('create', 'UA-40513081-2', 'auto');
+    // Track the initial pageview.
+    ga('send', 'pageview');
+
+    
+    
+</script>
+<link rel="canonical" href="http://status.deps.co" />
+    </head>
+    <!-- We attach the current status to the body, for changing page styles based on current status. -->
+    <body class="current-status state-warning locale-en" data-locale="en" data-timezone="UTC">
+        <!-- Include the individual page template content. -->
+        <!-- Create a container for the template specific styles. -->
+<div class="template-status-page">
+    <!-- Page Header & Navbar. -->
+    <header>        
+        <!-- Page Navbar. -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- Brand. -->
+                    
+
+                    <!-- Page Title. -->
+                    <!-- Hide the title on small screens of a logo exists. -->
+                    <span class="navbar-brand ">Deps Status</span> 
+
+                    <!-- Subscription button based on the various options for the page. -->
+                    
+                        <!-- Page only has a single subscription option, display a consolidated button. -->
+                        <a href="https://subscribe.sorryapp.com/8679af4c/slack/new" class="btn btn-subscribe navbar-btn navbar-header-btn">
+                            <i class="fa fa-slack"></i> 
+                                <span class="visible-xs-inline">Get Updates</span>
+                                <span class="hidden-xs">Get Updates via Slack</span>
+                        </a>
+                                           
+                </div>
+            </div>
+        </nav>
+
+        <div class="container container-md">
+            <!-- Current Status Message. -->
+            <section id="current-status">
+
+                <dl class="timeline timeline-header">
+                    <!-- Loop over the collection of current notices. -->
+                    
+                        <dt class="title">&nbsp;</dt>
+                            <dd>
+                                <!-- No current notices found -->
+                                <!-- We have nothing to be sorry about, so all is well. -->
+                                <h2><i class="fa fa-check-circle-o"></i> All systems are go</h2>
+                                    <!-- Check if any support / social links exists. -->
+                                    
+                                        <!-- Add a reference to support links. -->
+                                        <!-- Use the smart anchor plugin to link/not-link based on visibility. -->
+                                        <p>Don't agree with this? <a data-smart-anchor="#contact-support">Please let us know</a></p>
+                                    
+                            </dd>
+                    
+                </dl>
+            </section>
+        </div>
+    </header>
+
+    <!-- See if the page has components or not. -->
+    
+        <!-- Display the pages components, and their status. -->
+        <section id="page-components" class="section section-page-components">
+            <div class="container container-md">
+                <!-- Render the components, starting at the root level. -->
+                <!-- Page has components, display a list of them. -->
+<ul class="list-components">
+    <!-- Loop over the components for the page. -->
+    
+        <!-- Output the components details. -->
+        <li id="component-992" class="list-component ">
+            <!-- See if component has children to display. -->
+            
+
+            <div class="list-component-state list-component-state-operational ">
+                <span class="hidden-xs">Operational</span> <i class="fa fa-dot-circle-o list-component-state-icon" aria-hidden="true"></i>
+            </div>
+
+            <!-- Toggle truncation on long descriptions etc. -->
+            <a href="#list-component-details-992" data-toggle="truncate" role="button" title="Click here to view the full description for this component" aria-controls="#list-component-details-992">
+                <!-- Basic icon, can be overridden with CSS. -->
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </a>
+
+            <div class="list-component-body">
+                <div class="list-component-details truncate truncated" id="list-component-details-992">
+                    <!-- Component name and status. -->
+                    <strong class="list-component-name">App</strong>
+
+                    <!-- Optional description is one exists. -->
+                    
+                        <!-- Component has description, display it. -->
+                        <p class="list-component-description">Web application frontend</p>
+                    
+                </div>
+            </div>
+
+            <!-- See if component has children to display. -->
+            
+        </li>
+    
+        <!-- Output the components details. -->
+        <li id="component-993" class="list-component ">
+            <!-- See if component has children to display. -->
+            
+
+            <div class="list-component-state list-component-state-operational ">
+                <span class="hidden-xs">Operational</span> <i class="fa fa-dot-circle-o list-component-state-icon" aria-hidden="true"></i>
+            </div>
+
+            <!-- Toggle truncation on long descriptions etc. -->
+            <a href="#list-component-details-993" data-toggle="truncate" role="button" title="Click here to view the full description for this component" aria-controls="#list-component-details-993">
+                <!-- Basic icon, can be overridden with CSS. -->
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </a>
+
+            <div class="list-component-body">
+                <div class="list-component-details truncate truncated" id="list-component-details-993">
+                    <!-- Component name and status. -->
+                    <strong class="list-component-name">Repo</strong>
+
+                    <!-- Optional description is one exists. -->
+                    
+                        <!-- Component has description, display it. -->
+                        <p class="list-component-description">Hosted Maven repository</p>
+                    
+                </div>
+            </div>
+
+            <!-- See if component has children to display. -->
+            
+        </li>
+    
+</ul>
+
+            </div>
+        </section>
+    
+
+    <!-- Main Timeline. -->
+    <main>
+        <div class="container container-md">
+            <!-- Timeline of previous notices. -->
+            <dl class="timeline timeline-body">
+                <!-- Timeline of upcoming notices. -->
+                <!-- Only display if they exist. -->
+                
+
+                <!-- Heading for the list. -->
+                <lh>Previous Incidents</lh>
+
+                <!-- Sort the historic notice by ended_at, recent to oldest. -->
+                
+                <!-- Loop over the collection of previous notices, order date descending. -->
+                
+
+                <!-- End of Timeline. -->
+                <dt class="event event-final" role="presentation">Past notices</dt>
+                    <dd>No further notices from the past 7 days.</dd>
+            </dl>
+        </div>
+    </main>
+
+    <!-- Include the page footer. -->
+    <!-- The main footer include for each of the pages, not included directly in the boilerplate layout as it wouldn't allow proper nesting. -->
+<!-- Page Footer & Copyright. -->
+<footer>
+    <!-- Support Links If Defined. -->
+    
+        <div class="container container-sm">
+            <div class="footer-body" id="contact-support">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>Need Support?</h4>
+
+                        <!-- Main Page Nav. -->
+                        <ul class="list-support-links">
+                            <!-- Loop over the supplied support options. -->
+                            
+                                <!-- Provide a list item for each. -->
+                                <li class="support-link-email">
+                                    <!-- Conditionally append mailto: and tel: for appropriate actions. -->
+                                    <a href="mailto:suport@deps.co" target="_top">suport@deps.co</a>
+                                </li>
+                            
+
+                            <!-- Loop over the supplied social accounts. -->
+                            
+                                <!-- Output a link for each social channel. -->
+                                <li class="support-link-twitter">
+                                    <!-- Dynamicly build a link to each type. -->
+                                    <a href="https://twitter.com/@deps_app" target="_top">
+                                        <!-- Use the locale switched string for each type too. -->
+                                        <i class="fa fa-twitter fa-fw"></i>Follow us on Twitter
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <div class="container container-md">
+        <div class="footer-footer">
+            <div class="row">
+                <!-- See if legal links are defined. -->
+                
+                    <!-- No legal links, display powered-by alone. -->
+                    <div class="col-xs-12">
+                        <!-- Accreditation link, we'd love it if you'd leave this in place. -->
+                        <span class="copyright"><a href="https://www.sorryapp.com/powered-by.html?utm_source=status.deps.co&utm_medium=statusfooter" target="_blank" rel="noopener noreferrer" title="Learn more about the company who provides this status page.">Powered by Sorry&#8482;</a></span>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+        <!-- JavaScript Assets. -->
+        <script src="https://assets0.sorryapp.com/themes/000/006/315/assets/status-page.min.js?1587725659"></script>
+
+        <!-- Injected Head Content. -->
+        
+		    <!-- Sentry JS Error Logging -->
+		    <!-- Core sentry library from the CDN. -->
+		    <script src="https://cdn.ravenjs.com/2.0.1/raven.min.js"></script>
+		    <!-- Initialize Raven JS Error Logging. -->
+		    <script>Raven.config('https://5990b1624eea45d78719070434e8dd10@app.getsentry.com/53074').install();</script>
+		
+    </body>
+</html>

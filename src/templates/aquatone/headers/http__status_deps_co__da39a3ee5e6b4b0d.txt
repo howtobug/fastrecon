@@ -1,0 +1,15 @@
+200 OK
+Via: 1.1 669eb1ae773e998ab920bd6de86bf4ec.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: JNB50
+Retry-Count: 0
+Expires: -1
+X-Cache: RefreshHit from cloudfront
+X-Amz-Cf-Id: 4I1q6bnUbJ8dAb6l1wq4CZHLVrhRGxvVhOIRtDGO6MVb7fMWhYHDJg==
+Etag: "d00a9140ab99dddd61fd297d48f46b67"
+Accept-Ranges: bytes
+Date: Sun, 17 May 2020 20:38:50 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Length: 13261
+Last-Modified: Tue, 12 May 2020 13:24:31 GMT
+Server: AmazonS3
+Content-Type: text/html

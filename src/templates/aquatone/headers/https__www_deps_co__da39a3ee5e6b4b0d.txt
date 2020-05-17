@@ -1,0 +1,12 @@
+200 OK
+Server: Netlify
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Frame-Options: SAMEORIGIN
+Retry-Count: 0
+Age: 286968
+Vary: Accept-Encoding
+X-Nf-Request-Id: 41a9ac8b-e16c-4329-8b04-52829a61b9fc-3687080
+Date: Thu, 14 May 2020 12:56:03 GMT
+Etag: "d8131c0c73fbfaac99905f63cd8dcede-ssl-df"

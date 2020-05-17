@@ -1,0 +1,23 @@
+app.deps.co
+docs.deps.co
+versions.deps.co
+status.deps.co
+www.deps.co
+deps.co
+deps.co
+www.deps.co
+deps.co
+deps.co
+[*] Processing domain deps.co
+[*] Scanning deps.co for A records
+ deps.co
+ www.deps.co
+ docs.deps.co
+ docs.deps.co
+ docs.deps.co
+ docs.deps.co
+ app.deps.co
+ status.deps.co
+ status.deps.co
+ status.deps.co
+ status.deps.co

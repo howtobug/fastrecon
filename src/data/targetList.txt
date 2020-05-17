@@ -1,0 +1,2 @@
+backblaze.com
+deps.co

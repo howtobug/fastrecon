@@ -1,0 +1,8 @@
+401 Unauthorized
+Content-Type: text/html
+Alt-Svc: clear
+Retry-Count: 0
+Server: nginx
+Date: Sun, 17 May 2020 20:47:19 GMT
+Set-Cookie: session=expired; Max-Age=0; Path=/; HttpOnly depsLoggedIn=expired; Max-Age=0; Path=/; Domain=deps.co; HttpOnly
+Via: 1.1 google
