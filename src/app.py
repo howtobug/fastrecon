@@ -185,7 +185,7 @@ def waybackurls(domain):
 def screenshots(domain):
     aquatone_folder = "engine/results/{}/aquatone/*".format(domain)
     system("cp -r {} templates/".format(aquatone_folder))
-    return render_template('aquatone/aquatone_report.html')
+    return render_template('aquatone_report.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
