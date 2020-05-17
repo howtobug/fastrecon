@@ -1,0 +1,59 @@
+[*] Processing domain hackerone.com
+[*] Using system resolvers ['192.168.18.1', 'fec0:0:0:ffff::1', 'fec0:0:0:ffff::2']
+[+] Getting nameservers
+162.159.0.31 - a.ns.hackerone.com
+162.159.1.31 - b.ns.hackerone.com
+[-] Zone transfer failed
+
+[+] IPv6 (AAAA) records found. Try running dnscan with the -6 option.
+2606:4700::6810:6334
+
+2606:4700::6810:6434
+
+[+] TXT records found
+"c06l6z7hp4vk6bzpqb1j6b8w1m64nf84"
+"citrix-verification-code=9c920630-2d05-4154-b72a-1021665d3b58"
+"drift-domain-verification=18fef5450d713c159ad9f6309fa338d298c11edd56fb22e343d758fb5f58437f"
+"docusign=848c7864-3a91-42aa-8e30-2671086f7516"
+"v=spf1 include:_spf.google.com include:amazonses.com include:mail.zendesk.com include:spf.mail.intercom.io include:mktomail.com include:registrarmail.net -all"
+"h1-domain-verification=LDEQA8SYNEMgdUN1kfMtjFNptDJcnjKN8LxNHCN3JNvT5Fxo"
+"4b7570f2564f4074b42872e1d78668ad"
+"atlassian-domain-verification=JpJ4g3munTo9KsuR3Elcdpn97c+KQV7KDjj2YmE+ULiWhGlcfA5f1ivoC0W2puQk"
+"facebook-domain-verification=niq4ke9m7djq4jt36f02t093aig8a5"
+"adobe-idp-site-verification=5d77b0274800290cf193145126595b14308358f46dfe90eba5e298f99d32d2fc"
+"cloudpiercer-verification=32e7eea9d2f153b176b182626588bc77"
+"google-site-verification=mKdqQzjtY7X20BzUFnhAmFU2pmtFJ_Zie_S22FiwubA"
+"stripe-verification=20c821f6e4dfc5ee358ea9b8e4635cf062a2acac5751f8004d23b122f1cb5ac2"
+"zapier-domain-verification-challenge=d1be5c1b-f415-418f-9542-abc14d8321af"
+"ZOOM_verify_pzZpSwKqRx6pAD9lLkSl5g"
+"google-site-verification=glWWhC-27LpigyjAxBsVOVUScJgNQ23GWdC4uOWC3dc"
+"stripe-verification=74802599834dfbfc093c8352686c992d22e7b20a6fdcfceac2e6a846074d6936"
+"MS=ms75772789"
+
+[+] DMARC records found
+"v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:fgunarop@ag.dmarcian.com,mailto:dmarc-reports@hackerone.com; ruf=mailto:fgunarop@fr.dmarcian.com;"
+
+[+] MX records found, added to target list
+20 alt1.aspmx.l.google.com.
+30 aspmx2.googlemail.com.
+10 aspmx.l.google.com.
+20 alt2.aspmx.l.google.com.
+30 aspmx3.googlemail.com.
+
+[*] Scanning hackerone.com for A records
+104.16.99.52 - hackerone.com
+104.16.100.52 - www.hackerone.com
+104.16.100.52 - hackerone.com
+104.16.99.52 - www.hackerone.com
+185.199.108.153 - docs.hackerone.com
+185.199.109.153 - docs.hackerone.com
+185.199.111.153 - docs.hackerone.com
+185.199.110.153 - docs.hackerone.com
+104.16.100.52 - api.hackerone.com
+104.16.99.52 - api.hackerone.com
+104.16.55.111 - support.hackerone.com
+104.16.51.111 - support.hackerone.com
+104.16.53.111 - support.hackerone.com
+104.16.52.111 - support.hackerone.com
+104.16.54.111 - support.hackerone.com
+
