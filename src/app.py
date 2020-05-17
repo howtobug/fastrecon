@@ -187,5 +187,10 @@ def screenshots(domain):
     system("cp -r {} templates/".format(aquatone_folder))
     return render_template('aquatone_report.html')
 
+@app.route('/screenshots/screenshots/<file>')
+def get_image(file):
+    filename = file
+    return send_file("screenshots/{}".format(filename), mimetype='image/png')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
