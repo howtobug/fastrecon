@@ -1,0 +1,2 @@
+# fastrecon
+Automated Reconnaissance Tool
